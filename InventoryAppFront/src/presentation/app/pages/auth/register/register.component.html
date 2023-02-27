@@ -1,0 +1,85 @@
+<app-spinner [showSpinner]="submitted"></app-spinner>
+
+<div class="login-container">
+    <div class="section-form">
+        <div class="auth-container">
+            <section class="auth-google">
+                <h2 class="auth-google__title">Bienvenido a InventoryApp</h2>
+                <p class="auth-google__subtitle">Registrate con Google o Llene el formulario</p>
+                <button class="auth-google__btn">
+                    <img class="btn__icon" src="google.png" />
+                    <span class="btn__text">Registrate con Google</span>
+                </button>
+
+
+            </section>
+            <hr class="divider">
+
+
+            <form class="auth-credential" [formGroup]="registerForm" (submit)="save()">
+
+                <div class="field">
+                    <span class="p-float-label">
+                        <input type="text" id="name" formControlName="name" class="auth-credential__input" pInputText
+                            autofocus aria-describedby="name-help">
+                        <label for="name">Nombre</label>
+                    </span>
+
+                    <app-error-message [errorMessage]="'Nombre requerido'"
+                        [show]="f['name'].dirty && f['name'].errors?.['required']"></app-error-message>
+
+                </div>
+
+                <div class="field">
+                    <span class="p-float-label">
+                        <input type="text" id="surname" formControlName="surname" class="auth-credential__input"
+                            pInputText aria-describedby="surname-help">
+                        <label for="surname">Apellidos</label>
+                    </span>
+
+                    <app-error-message [errorMessage]="'Apellidos requerido'"
+                        [show]="f['surname'].dirty && f['surname'].errors?.['required']"></app-error-message>
+
+                </div>
+
+
+                <div class="field">
+                    <span class="p-float-label">
+                        <input type="email" id="email" formControlName="email" class="auth-credential__input" pInputText
+                            aria-describedby="email-help">
+                        <label for="email">Email</label>
+                    </span>
+
+                    <app-error-message [errorMessage]="'Email requerido'"
+                        [show]="f['email'].dirty && f['email'].errors?.['required']"></app-error-message>
+                    <app-error-message [errorMessage]="'Correo invalido'"
+                        [show]="f['email'].errors?.['email']"></app-error-message>
+
+                </div>
+
+                <div class="field">
+                    <span class="p-float-label">
+                        <p-password id="password" formControlName="password" [toggleMask]="true" [feedback]="false"
+                            aria-describedby="password-help"></p-password>
+                        <label for="password">Password</label>
+                    </span>
+                    <app-error-message [errorMessage]="'password requerido'"
+                        [show]="f['password'].dirty && f['password'].errors?.['required']"></app-error-message>
+                    <app-error-message [show]="f['password'].errors?.['minlength']"
+                        errorMessage="El password necesita al menos {{f['password'].errors?.['minlength']?.requiredLength}} caracteres"></app-error-message>
+
+
+                </div>
+
+                <button pButton type="submit" [disabled]="registerForm.invalid" label="Iniciar sesión"
+                    class="auth-credential__btn"></button>
+
+                <p>¿ ya tienes una cuenta ?, inicia sesión <a href="auth/signin">aquí</a></p>
+            </form>
+
+        </div>
+    </div>
+    <div class="section-image">
+
+    </div>
+</div>

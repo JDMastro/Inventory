@@ -1,4 +1,3 @@
-
 <app-spinner [showSpinner]="submitted"></app-spinner>
 
 <div class="login-container">
@@ -24,11 +23,11 @@
                             autofocus aria-describedby="email-help">
                         <label for="email">Email</label>
                     </span>
-                    
+
                     <app-error-message [errorMessage]="'Email requerido'"
                         [show]="f['email'].dirty && f['email'].errors?.['required']"></app-error-message>
                     <app-error-message [errorMessage]="'Correo invalido'"
-                        [show]="f['email'].errors?.['email']"></app-error-message>
+                        [show]="f['email'].dirty && f['email'].errors?.['email']"></app-error-message>
 
                 </div>
 
@@ -50,10 +49,12 @@
                     class="auth-credential__btn"></button>
 
                 <p>¿ No tienes cuenta aun ?, registrate <a href="auth/signup">aquí</a></p>
+
+
             </form>
         </div>
     </div>
     <div class="section-image">
-        
+
     </div>
 </div>

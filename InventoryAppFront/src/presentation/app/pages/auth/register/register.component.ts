@@ -7,7 +7,9 @@ import {
   Validators,
 } from '@angular/forms';
 import { NotificationService } from '@app/services/notification/notification.service';
+import { ValidateEmail, UniqueEmail } from "@app/shared/validators";
 import { UserRegisterUseCase } from 'domain/usecases/auth/user-register.usecase';
+import { CheckEmailUseCase } from 'domain/usecases/validation/check-email.usecase';
 
 @Component({
   selector: 'app-register',
@@ -28,16 +30,18 @@ export class RegisterComponent {
   constructor(
     private fb: FormBuilder,
     private UserRepo: UserRegisterUseCase,
-    private notification: NotificationService
+    private notification: NotificationService,
+    private emailCheck : CheckEmailUseCase
   ) {}
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
       email: new FormControl(
         '',
-        [Validators.required, Validators.email],
+        [Validators.required, ValidateEmail],
         [
           /*  aqui se hace las validaciones asyncronas(api) */
+          UniqueEmail(this.emailCheck)
         ]
       ),
       password: new FormControl('', [

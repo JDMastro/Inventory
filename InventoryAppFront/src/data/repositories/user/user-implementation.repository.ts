@@ -38,4 +38,5 @@ export class UserImplementationRepository extends UserRepository {
       .get<UserEntity>('')
       .pipe(map(this.userMapper.mapFrom));
   }
+
 }

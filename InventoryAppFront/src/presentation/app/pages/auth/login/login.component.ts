@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { NotificationService } from '@app/services/notification/notification.service';
+import { ValidateEmail } from '@app/shared/validators';
 import { UserLoginUseCase } from 'domain/usecases/auth/user-login.usecase';
 
 @Component({
@@ -25,6 +26,8 @@ export class LoginComponent implements OnInit {
    */
   submitted?: boolean;
 
+  
+
   constructor(
     private fb: FormBuilder,
     private UserRepo: UserLoginUseCase,
@@ -34,7 +37,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.fb.group({
       email: new FormControl(
         'admin@localhost.com',
-        [Validators.required, Validators.email],
+        [Validators.required, ValidateEmail],
         [
           /*  aqui se hace las validaciones asyncronas(api) */
         ]
@@ -55,12 +58,13 @@ export class LoginComponent implements OnInit {
   }
 
   save() {
+    
     this.submitted = true;
     this.UserRepo.execute(this.loginForm.value).subscribe({
       next: (v) => {
         this.notification?.onSuccessNotify('Credenciales validas', 'success');
         this.submitted = false;
-        console.log(v)
+        console.log(v);
       },
       error: (e) => {
         /*console.log('loginComponent',e);*/ this.submitted = false;

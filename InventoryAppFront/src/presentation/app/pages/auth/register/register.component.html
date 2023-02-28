@@ -50,10 +50,14 @@
                         <label for="email">Email</label>
                     </span>
 
+
                     <app-error-message [errorMessage]="'Email requerido'"
                         [show]="f['email'].dirty && f['email'].errors?.['required']"></app-error-message>
                     <app-error-message [errorMessage]="'Correo invalido'"
-                        [show]="f['email'].errors?.['email']"></app-error-message>
+                        [show]="f['email'].dirty && f['email'].errors?.['email']"></app-error-message>
+
+                    <app-error-message [errorMessage]="'Este correo ya esta registrado'"
+                        [show]="f['email'].dirty && f['email'].errors?.['isUnique']"></app-error-message>
 
                 </div>
 

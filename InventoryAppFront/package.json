@@ -9,8 +9,8 @@
     "test": "ng test",
     "start:dev": "ng serve --c=dev",
     "build:dev": "ng build --c=dev",
-    "start:prod": "ng serve --c=prod",
-    "build:prod": "ng build --c=prod"
+    "start:prod": "ng serve --c=prod --optimization=true --output-hashing=all",
+    "build:prod": "ng build --c=prod --optimization=true --output-hashing=all"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +22,10 @@
     "@angular/platform-browser": "^15.1.0",
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
+    "@ngrx/effects": "^15.3.0",
+    "@ngrx/entity": "^15.3.0",
+    "@ngrx/store": "^15.3.0",
+    "@ngrx/store-devtools": "^15.3.0",
     "primeicons": "^6.0.1",
     "primeng": "^15.2.0",
     "rxjs": "~7.8.0",

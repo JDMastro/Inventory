@@ -28,6 +28,8 @@ builder.Services.AddCors(options =>
     );
 });
 
+ //builder.WebHost.UseUrls("https://*:8081", "http://*:8080");
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

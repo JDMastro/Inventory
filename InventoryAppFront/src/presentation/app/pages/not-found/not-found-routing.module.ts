@@ -5,7 +5,8 @@ import { NotFoundComponent } from './not-found.component';
 const routes: Routes = [
   {
     path: '404',
-    component : NotFoundComponent
+    component : NotFoundComponent,
+    data: { animation: 'isLeft' }
   }
 ];
 

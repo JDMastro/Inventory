@@ -22,3 +22,15 @@ D:\Inentory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\InventoryApp.D
 D:\Inentory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\refint\InventoryApp.Domain.dll
 D:\Inentory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\InventoryApp.Domain.pdb
 D:\Inentory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\ref\InventoryApp.Domain.dll
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\bin\Debug\net7.0\InventoryApp.Domain.deps.json
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\bin\Debug\net7.0\InventoryApp.Domain.dll
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\bin\Debug\net7.0\InventoryApp.Domain.pdb
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\InventoryApp.Domain.csproj.AssemblyReference.cache
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\InventoryApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\InventoryApp.Domain.AssemblyInfoInputs.cache
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\InventoryApp.Domain.AssemblyInfo.cs
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\InventoryApp.Domain.csproj.CoreCompileInputs.cache
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\InventoryApp.Domain.dll
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\refint\InventoryApp.Domain.dll
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\InventoryApp.Domain.pdb
+D:\Inventory\InventoryAppBack\InventoryApp.Domain\obj\Debug\net7.0\ref\InventoryApp.Domain.dll

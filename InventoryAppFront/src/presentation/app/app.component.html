@@ -8,5 +8,8 @@
 
 {{ error }}-->
 
-<router-outlet></router-outlet>
+<div [@routeAnimations]="prepareRoute(outlet)" class="routerContainer">
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>
+
 <app-notification></app-notification>

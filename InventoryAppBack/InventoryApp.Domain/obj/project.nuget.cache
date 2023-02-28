@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N8nOPSqlcgh48C4I3Xy/ryZNCC9HJNuNnaU5GhoQJ+HCpWE7zqgEpxQcxX9Owfik8tnmAQcaudRWhuHq+9nhBQ==",
+  "dgSpecHash": "6ngdBXhUaZvZWH3F5kdLnHBY0uGJPyqn3vO6BgrVvhQxAf6J+TFbROd3vjDUGao74p4uvp2gCnU3nkbyWfFDMg==",
   "success": true,
-  "projectFilePath": "D:\\Inentory\\InventoryAppBack\\InventoryApp.Domain\\InventoryApp.Domain.csproj",
+  "projectFilePath": "D:\\Inventory\\InventoryAppBack\\InventoryApp.Domain\\InventoryApp.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

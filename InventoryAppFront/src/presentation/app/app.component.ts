@@ -1,27 +1,18 @@
 import { Component } from '@angular/core';
-import { UserModel } from 'domain/models/user.model';
-import { UserLoginUseCase } from 'domain/usecases/auth/user-login.usecase';
+import { RouterOutlet } from "@angular/router";
+import { slider } from "@app/router-animations";
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations:[
+    slider
+  ]
 })
 export class AppComponent {
-  /*title = 'InventoryAppFront';
-  error: string = '';
-  user!: UserModel
-
-  constructor(private UserRepo: UserLoginUseCase) {}
-
-  test() {
-    this.UserRepo.execute({
-      email: 'admin@localhost.com',
-      password: 'Jaime9506$',
-    }).subscribe({
-      next: (v) => this.user = v,
-      error: (e) => this.error = e.error.Message,
-      complete: () => console.info('complete') 
-    });
-  }*/
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
 }

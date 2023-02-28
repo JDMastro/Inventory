@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Py6uiDqkX0mczLmtQ3dEytiAuzaaaZMLdH4kCu+uyAaL3NZM5axwtTnj5WVCNJuPp56N0lcHCuHtN3nk/2jVTQ==",
+  "dgSpecHash": "Kecbih+zbYMG20e1NoeAPjzP7IxRvGWcQ1KNDirA+KZrvo4o1/wuHQ3C2Jcy4hmVTrtm2p3Iya9wsjEiE9LfFQ==",
   "success": true,
-  "projectFilePath": "D:\\Inentory\\InventoryAppBack\\InventoryApp.Identity\\InventoryApp.Identity.csproj",
+  "projectFilePath": "D:\\Inventory\\InventoryAppBack\\InventoryApp.Identity\\InventoryApp.Identity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\-\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\-\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

@@ -54,7 +54,7 @@
                     <app-error-message [errorMessage]="'Email requerido'"
                         [show]="f['email'].dirty && f['email'].errors?.['required']"></app-error-message>
                     <app-error-message [errorMessage]="'Correo invalido'"
-                        [show]="f['email'].dirty && f['email'].errors?.['email']"></app-error-message>
+                        [show]="f['email'].errors?.['pattern']"></app-error-message>
 
                     <app-error-message [errorMessage]="'Este correo ya esta registrado'"
                         [show]="f['email'].dirty && f['email'].errors?.['isUnique']"></app-error-message>
@@ -79,6 +79,7 @@
                     class="auth-credential__btn"></button>
 
                 <p>¿ ya tienes una cuenta ?, inicia sesión <a href="auth/signin">aquí</a></p>
+                
             </form>
 
         </div>

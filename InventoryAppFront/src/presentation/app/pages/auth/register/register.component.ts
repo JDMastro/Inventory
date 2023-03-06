@@ -7,7 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { NotificationService } from '@app/services/notification/notification.service';
-import { ValidateEmail, UniqueEmail } from "@app/shared/validators";
+import { UniqueEmail } from '@app/shared/validators';
 import { UserRegisterUseCase } from 'domain/usecases/auth/user-register.usecase';
 import { CheckEmailUseCase } from 'domain/usecases/validation/check-email.usecase';
 
@@ -30,26 +30,32 @@ export class RegisterComponent {
   constructor(
     private fb: FormBuilder,
     private UserRepo: UserRegisterUseCase,
-    private notification: NotificationService,
-    private emailCheck : CheckEmailUseCase
+    private emailCheck: CheckEmailUseCase,
+    private notificationService: NotificationService
   ) {}
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
-      email: new FormControl(
-        '',
-        [Validators.required, ValidateEmail],
-        [
-          /*  aqui se hace las validaciones asyncronas(api) */
-          UniqueEmail(this.emailCheck)
-        ]
-      ),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(6),
-      ]),
-      name: new FormControl('', [Validators.required]),
-      surname: new FormControl('', [Validators.required]),
+      email: new FormControl('', {
+        validators: [
+          Validators.required,
+          Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),
+        ],
+        asyncValidators: [UniqueEmail(this.emailCheck)],
+        //updateOn: 'blur',
+      }),
+      password: new FormControl('', {
+        validators: [Validators.required, Validators.minLength(6)],
+        asyncValidators: [],
+      }),
+      name: new FormControl('', {
+        validators: [Validators.required],
+        asyncValidators: [],
+      }),
+      surname: new FormControl('', {
+        validators: [Validators.required],
+        asyncValidators: [],
+      }),
     });
   }
 
@@ -63,14 +69,22 @@ export class RegisterComponent {
 
   save() {
     this.submitted = true;
-
-    setTimeout(() => {
-      this.submitted = false;
-      this.notification?.onErrorNotify(
-        'Error en el registro',
-        'Error de credenciales'
-      );
-    }, 5000);
+    this.UserRepo.execute(this.registerForm.value).subscribe({
+      next: (v) => {
+        this.submitted = false;
+        this.notificationService.onSuccessNotify(
+          'Registro',
+          'El registro del usuario se ha hecho correctamente'
+        );
+        console.log(v);
+        this.onReset();
+      },
+      error: (e) => {
+        //console.log('loginComponent',e);
+        this.submitted = false;
+      },
+      complete: () => console.log('ok'),
+    });
   }
 
   /**
@@ -79,6 +93,7 @@ export class RegisterComponent {
    */
   private onReset(): void {
     this.submitted = false;
+    this.registerForm.reset(this.registerForm.value);
     this.registerForm.reset();
   }
 }

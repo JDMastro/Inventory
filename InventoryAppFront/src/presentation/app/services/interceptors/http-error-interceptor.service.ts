@@ -9,6 +9,8 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { NotificationService } from '../notification/notification.service';
 
+import { Router } from '@angular/router';
+
 /**
  * Con esta clase vamos a poder interceptar todas las peticiones
  * http que se hagan en la aplicación, con el fin de manejar lo errores
@@ -19,7 +21,10 @@ import { NotificationService } from '../notification/notification.service';
  */
 @Injectable({ providedIn: 'root' })
 export class HttpErrorInterceptorService implements HttpInterceptor {
-  constructor(private notification: NotificationService) {}
+  constructor(
+    private notification: NotificationService,
+    private router: Router
+  ) {}
 
   intercept(
     req: HttpRequest<any>,
@@ -28,7 +33,7 @@ export class HttpErrorInterceptorService implements HttpInterceptor {
     return next.handle(req).pipe(
       catchError((error: HttpErrorResponse) => {
         return throwError(() => {
-            const errorMessage = this.setError(error)
+          const errorMessage = this.setError(error);
           this.notification.onErrorNotify('ERROR', errorMessage);
           return error.error;
         });
@@ -44,8 +49,10 @@ export class HttpErrorInterceptorService implements HttpInterceptor {
     } else {
       if (error.status !== 0) {
         errorMessage = error.error.Message;
+      } else {
+        this.router.navigate(['/noconnection']);
       }
     }
-    return errorMessage
+    return errorMessage;
   }
 }

@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { UseCase } from '@src/base/use-case';
-import { EmailValidatorModel } from '@src/domain/models/email-validator.model';
+import { EmailValidatorModel } from 'domain/models/users/email-validator.model';
 import { ValidationRepository } from '@src/domain/repositories/validation.repository';
 
 export class CheckEmailUseCase

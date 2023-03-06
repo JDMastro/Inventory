@@ -99,7 +99,7 @@ namespace InventoryApp.Identity.Migrations
                         {
                             Id = "17cc612c-3115-4b15-b763-ee0101456da2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "cf688f57-823c-4b15-8951-c43ad6689da4",
+                            ConcurrencyStamp = "0b48aa22-9e54-4980-9339-4dd6e93fa504",
                             Email = "admin@localhost.com",
                             EmailConfirmed = true,
                             LastName = "Mastrodomenico Lopez",
@@ -107,9 +107,9 @@ namespace InventoryApp.Identity.Migrations
                             Name = "Jaime",
                             NormalizedEmail = "ADMIN@LOCALHOST.COM",
                             NormalizedUserName = "JDML",
-                            PasswordHash = "AQAAAAIAAYagAAAAELldbMiMuhPlTDLY8rU50a0ZL4+1E1iMQwvn7Kl8QWoxE/JaDNHEnzNI/TUw8AvlGg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOjUzI0ommPuwVdqKZW8Fy+jnmZRE4ChqZ5u/Fw0wrRpCmQScyJLHK56bJw/Hysi+A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "225d70d0-0b8c-4571-aec7-7ad3ac8eccb2",
+                            SecurityStamp = "90110015-ac9b-486f-9315-23db4cf4e51d",
                             TwoFactorEnabled = false,
                             UserName = "jdml"
                         },
@@ -117,7 +117,7 @@ namespace InventoryApp.Identity.Migrations
                         {
                             Id = "ae718866-eeac-40f9-8172-b0da22e03649",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "68cb14cc-29d6-4e83-85d2-c2533e9ef5f6",
+                            ConcurrencyStamp = "67188fd4-6411-4958-b4f8-618e5f7c90ac",
                             Email = "driver@localhost.com",
                             EmailConfirmed = true,
                             LastName = "Mastrodomenico Lopez",
@@ -125,9 +125,9 @@ namespace InventoryApp.Identity.Migrations
                             Name = "moises",
                             NormalizedEmail = "DRIVER@LOCALHOST.COM",
                             NormalizedUserName = "MEML",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPMWkoyrpQk1uDVOIQYXh42di+mSy8p5CGfaGDY4i8GtJDY2PJhHDtwJAk1NLDUNcg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJqxkKn+J7LHYOMPRo5lWK1p1puVdGUWZbfqUZNEIThzxhHkoIrTyambsRXof/ZuqQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "aa7a4c0c-e857-48b0-a363-cbcb4102b779",
+                            SecurityStamp = "baea6862-a322-4e10-bbde-100a64b53d3e",
                             TwoFactorEnabled = false,
                             UserName = "meml"
                         },
@@ -135,7 +135,7 @@ namespace InventoryApp.Identity.Migrations
                         {
                             Id = "9268f6de-f692-4c0e-a485-40dbba802af1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7c36205e-dcd3-4cee-8b17-d187ef10f5c0",
+                            ConcurrencyStamp = "5f187afa-3fea-4e8e-8d46-3eb385792168",
                             Email = "secretary@localhost.com",
                             EmailConfirmed = true,
                             LastName = "Mastrodomenico Lopez",
@@ -143,9 +143,9 @@ namespace InventoryApp.Identity.Migrations
                             Name = "sebastian",
                             NormalizedEmail = "SECRETARY@LOCALHOST.COM",
                             NormalizedUserName = "SML",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKsR9i7H/WV3fHWO5aQnHGQq4HLMuC0h36nBbJeF+6/+PMddStzIPTLLIIp5riKgLw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAaDXeSTk2+4/6rQjP4OIvu1ZfNCOPwBS+3Nh3mjObYdKyYrtf+Egp4HHZ+v2dFP6Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c503cbd9-bcbd-4fb3-a1c8-c5bf3b2e1d19",
+                            SecurityStamp = "ff42bb07-8651-423e-9d79-4ea49567b803",
                             TwoFactorEnabled = false,
                             UserName = "sml"
                         });

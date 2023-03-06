@@ -1,5 +1,5 @@
 import { Mapper } from '@src/base/mapper';
-import { EmailValidatorModel } from 'domain/models/email-validator.model';
+import { EmailValidatorModel } from 'domain/models/users/email-validator.model';
 import { EmailValidatorEntity } from 'data/repositories/validators/entities/email-validators-entity';
 
 export class EmailImplementationRepositoryMapper extends Mapper<

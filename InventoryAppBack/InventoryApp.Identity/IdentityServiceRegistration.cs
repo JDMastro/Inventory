@@ -40,6 +40,8 @@ namespace InventoryApp.Identity
                 options.Password.RequiredLength = 5;
                 options.Password.RequireLowercase = true;
                 options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireLowercase = false;
             })
                 .AddEntityFrameworkStores<InventoryAppIdentityDbContext>()
                 .AddDefaultTokenProviders();

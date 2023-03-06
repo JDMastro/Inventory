@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { UserEntity } from '@src/data/repositories/user/entities/user-entity';
 import { UserImplementationRepositoryMapper } from '@src/data/repositories/user/mappers/user-repository.mapper';
 import { UserRepository } from '@src/domain/repositories/user.repository';
-import { UserModel } from '@src/domain/models/user.model';
+import { UserModel } from '@src/domain/models/users/user.model';
 import { environment } from 'environments/environment';
 
 @Injectable({

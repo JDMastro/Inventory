@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { UserModel } from '@src/domain/models/user.model';
+import { UserModel } from '@src/domain/models/users/user.model';
 
 
 /**

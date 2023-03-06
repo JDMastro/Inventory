@@ -9,7 +9,7 @@
     "test": "ng test",
     "start:dev": "ng serve --c=dev",
     "build:dev": "ng build --c=dev",
-    "start:prod": "ng serve --c=prod --optimization=true --output-hashing=all",
+    "start:prod": "ng serve --c=prod",
     "build:prod": "ng build --c=prod --optimization=true --output-hashing=all"
   },
   "private": true,

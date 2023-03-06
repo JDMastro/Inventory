@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: ()=> import('./pages/dashboard/dashboard.module').then(m=> m.DashboardModule )
   },
   {
+    path: 'noconnection',
+    loadChildren: ()=>  import('./pages/not-connection/not-connection.module').then(m=> m.NotConnectionModule )
+  },
+  {
     path: '',
     pathMatch : 'full',
     redirectTo: 'auth/signin'

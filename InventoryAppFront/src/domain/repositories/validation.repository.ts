@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { EmailValidatorModel } from '@src/domain/models/email-validator.model';
+import { EmailValidatorModel } from 'domain/models/users/email-validator.model';
 
 
 /**

@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { UseCase } from '@src/base/use-case';
-import { UserModel } from '@src/domain/models/user.model';
+import { UserModel } from '@src/domain/models/users/user.model';
 import { UserRepository } from '@src/domain/repositories/user.repository';
 
 export class UserLoginUseCase

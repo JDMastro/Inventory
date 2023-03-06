@@ -9,7 +9,7 @@
         /// <summary>
         /// Representa la identificación del usuario
         /// </summary>
-        public string UserId { get; set; } = string.Empty;
+        public string Id { get; set; } = string.Empty;
         /// <summary>
         /// Representa el correo del usuario
         /// </summary>
@@ -18,5 +18,10 @@
         /// Representa el token de autenticación del usuario
         /// </summary>
         public string Token { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Representa el username
+        /// </summary>
+        public string Username { get; set; } = string.Empty;
     }
 }

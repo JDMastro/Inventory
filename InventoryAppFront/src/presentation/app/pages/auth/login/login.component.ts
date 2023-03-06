@@ -62,8 +62,7 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
     this.UserRepo.execute(this.loginForm.value).subscribe({
       next: (v) => {
-        this.notification?.onSuccessNotify('Credenciales validas', 'success');
-        this.submitted = false;
+         this.submitted = false;
         console.log(v);
       },
       error: (e) => {

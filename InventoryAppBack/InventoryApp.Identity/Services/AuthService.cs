@@ -82,7 +82,8 @@ namespace InventoryApp.Identity.Services
                 {
                     Email = user.Email,
                     Token = new JwtSecurityTokenHandler().WriteToken(token),
-                    UserId = user.Id
+                    Id = user.Id,
+                    Username = user.UserName
                 };
             }
 

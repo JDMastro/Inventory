@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { EmailValidatorModel } from "domain/models/email-validator.model";
+import { EmailValidatorModel } from "domain/models/users/email-validator.model";
 import { ValidationRepository } from "domain/repositories/validation.repository";
 import { environment } from "environments/environment";
 import { map } from 'rxjs/operators';

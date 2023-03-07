@@ -21,4 +21,9 @@ export interface UserModel {
    * Representa el token de acceso del usuario
    */
   _token: string;
+
+  /**
+   * Representa el token de acceso del usuario
+   */
+  _typeOftoken: string;
 }

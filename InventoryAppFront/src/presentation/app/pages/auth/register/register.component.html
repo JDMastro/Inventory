@@ -75,10 +75,10 @@
 
                 </div>
 
-                <button pButton type="submit" [disabled]="registerForm.invalid" label="Iniciar sesión"
+                <button pButton type="submit" [disabled]="!registerForm.valid" label="Iniciar sesión"
                     class="auth-credential__btn"></button>
 
-                <p>¿ ya tienes una cuenta ?, inicia sesión <a href="auth/signin">aquí</a></p>
+                <p>¿ ya tienes una cuenta ?, inicia sesión <a href="/auth/signin">aquí</a></p>
                 
             </form>
 

@@ -6,9 +6,11 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { NotificationService } from '@app/services/notification/notification.service';
+//import { NotificationService } from '@app/services/notification/notification.service';
 import { ValidateEmail } from '@app/shared/validators';
 import { UserLoginUseCase } from 'domain/usecases/auth/user-login.usecase';
+import * as authActions from '@app/state/auth/auth.actions';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-login',
@@ -26,12 +28,11 @@ export class LoginComponent implements OnInit {
    */
   submitted?: boolean;
 
-  
-
   constructor(
     private fb: FormBuilder,
     private UserRepo: UserLoginUseCase,
-    private notification: NotificationService
+    //private notification: NotificationService,
+    private store: Store
   ) {}
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -58,15 +59,17 @@ export class LoginComponent implements OnInit {
   }
 
   save() {
-    
     this.submitted = true;
+    //this.store.dispatch(authActions.loginRequest({ credentials: this.loginForm.value }))
+    //this.submitted = false;
     this.UserRepo.execute(this.loginForm.value).subscribe({
       next: (v) => {
-         this.submitted = false;
-        console.log(v);
+        this.submitted = false;
+        this.store.dispatch(authActions.loginUserInfo({ userInfo: v }));
       },
       error: (e) => {
-        /*console.log('loginComponent',e);*/ this.submitted = false;
+        //console.log('loginComponent',e);
+        this.submitted = false;
       },
       complete: () => console.info('complete'),
     });

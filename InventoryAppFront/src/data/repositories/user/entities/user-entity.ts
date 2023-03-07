@@ -22,4 +22,9 @@ export interface UserEntity {
    * Representa el token de acceso del usuario
    */
   token: string;
+
+    /**
+   * Representa el token de acceso del usuario
+   */
+  typeOfToken: string
 }

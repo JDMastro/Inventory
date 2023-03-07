@@ -45,10 +45,10 @@
 
                 </div>
 
-                <button pButton type="submit" [disabled]="loginForm.invalid" label="Iniciar sesión"
+                <button pButton type="submit" [disabled]="!loginForm.valid" label="Iniciar sesión"
                     class="auth-credential__btn"></button>
 
-                <p>¿ No tienes cuenta aun ?, registrate <a href="auth/signup">aquí</a></p>
+                <p>¿ No tienes cuenta aun ?, registrate <a href="/auth/signup">aquí</a></p>
 
 
             </form>

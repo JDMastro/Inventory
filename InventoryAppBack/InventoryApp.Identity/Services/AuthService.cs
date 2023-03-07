@@ -50,7 +50,8 @@ namespace InventoryApp.Identity.Services
                 Id = user.Id,
                 Token = new JwtSecurityTokenHandler().WriteToken(token),
                 Email = user.Email,
-                Username = user.UserName
+                Username = user.UserName,
+                TypeOfToken = TypeOfToken.TypeToken
             };
             return response;
 
@@ -77,13 +78,9 @@ namespace InventoryApp.Identity.Services
             if (result.Succeeded)
             {
                 await _userManager.AddToRoleAsync(user, role);
-                var token = await GenerateToken(user);
                 return new RegistrationResponse
                 {
-                    Email = user.Email,
-                    Token = new JwtSecurityTokenHandler().WriteToken(token),
                     Id = user.Id,
-                    Username = user.UserName
                 };
             }
 

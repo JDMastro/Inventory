@@ -1,6 +1,9 @@
-<a href="/dashboard/home">Home</a>
+<a routerLink="/dashboard/home">Home</a>
 <br>
-<a href="dashboard/product">Product</a>
+<a routerLink="/dashboard/product">Product</a>
+
+
+<p>{{( user$ | async )?._email}}</p>
 
 <main>
     <router-outlet></router-outlet>

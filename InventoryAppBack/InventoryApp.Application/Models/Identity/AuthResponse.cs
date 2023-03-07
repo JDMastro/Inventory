@@ -22,5 +22,10 @@
         /// Representa el token de autenticación del usuario
         /// </summary>
         public string Token { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Representa el tipo token de autenticación del usuario
+        /// </summary>
+        public string TypeOfToken { get; set; } = string.Empty;
     }
 }

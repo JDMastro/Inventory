@@ -12,6 +12,7 @@ export class UserImplementationRepositoryMapper extends Mapper<
       _email: param.email,
       _token: param.token,
       _username: param.username,
+      _typeOftoken: param.typeOfToken
     };
   }
   mapTo(param: UserModel): UserEntity {
@@ -20,6 +21,7 @@ export class UserImplementationRepositoryMapper extends Mapper<
       email: param._email,
       token: param._token,
       username: param._username,
+      typeOfToken: param._typeOftoken
     };
   }
 }

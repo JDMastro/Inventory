@@ -8,8 +8,10 @@ import {
 } from '@angular/forms';
 import { NotificationService } from '@app/services/notification/notification.service';
 import { UniqueEmail } from '@app/shared/validators';
+import { Store } from '@ngrx/store';
 import { UserRegisterUseCase } from 'domain/usecases/auth/user-register.usecase';
 import { CheckEmailUseCase } from 'domain/usecases/validation/check-email.usecase';
+import * as authActions from '@app/state/auth/auth.actions';
 
 @Component({
   selector: 'app-register',
@@ -31,7 +33,8 @@ export class RegisterComponent {
     private fb: FormBuilder,
     private UserRepo: UserRegisterUseCase,
     private emailCheck: CheckEmailUseCase,
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    private store: Store
   ) {}
 
   ngOnInit(): void {
@@ -76,7 +79,8 @@ export class RegisterComponent {
           'Registro',
           'El registro del usuario se ha hecho correctamente'
         );
-        console.log(v);
+        //console.log(v)
+        //this.store.dispatch(authActions.loginUserInfo({ userInfo: v }));
         this.onReset();
       },
       error: (e) => {

@@ -11,6 +11,13 @@ import { ContainerComponent } from './pages/dashboard/container/container.compon
 import { ComponentsModule } from './components/components.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorInterceptorService } from './services/interceptors/http-error-interceptor.service';
+import { CookieService } from 'ngx-cookie-service';
+import { StoreModule } from '@ngrx/store';
+import { authReducer } from '@app/state/auth/auth.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { AuthEffects } from '@app/state/auth/auth.effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'environments/environment';
 //import { ErrorMessageComponent } from './components/error-message/error-message.component';
 
 
@@ -29,14 +36,21 @@ import { HttpErrorInterceptorService } from './services/interceptors/http-error-
     BrowserAnimationsModule,
     ComponentsModule,
     IndicatorsModule,
-    NotificationModule.forRoot()
+    NotificationModule.forRoot(),
+    StoreModule.forRoot({ auth: authReducer }),
+    EffectsModule.forRoot([AuthEffects]),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production, // Restrict extension to log-only mode
+    }),
   ],
   providers:[
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpErrorInterceptorService,
       multi: true
-    }
+    },
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

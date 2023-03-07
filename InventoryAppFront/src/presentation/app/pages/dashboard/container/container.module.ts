@@ -12,6 +12,7 @@ import { ContainerRoutingModule } from './container-routing.module';
     CommonModule,
     ContainerRoutingModule,
   ],
+  
   //exports: [ContainerComponent]
 })
 export class ContainerModule { }

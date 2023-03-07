@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 //import { ErrorMessageComponent } from "@app/components/error-message/error-message.component";
 import { SpinnerModule } from "@app/shared/indicators/spinner/spinner.module";
 import { ComponentsModule } from "../../../components/components.module";
+import { AuthcookieService } from '@app/services/cookie/authcookie.service';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ComponentsModule } from "../../../components/components.module";
         ReactiveFormsModule,
         SpinnerModule,
         ComponentsModule
-    ]
+    ],
+    providers:[AuthcookieService]
 })
 export class LoginModule { }

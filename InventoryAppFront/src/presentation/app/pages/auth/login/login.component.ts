@@ -11,6 +11,7 @@ import { ValidateEmail } from '@app/shared/validators';
 import { UserLoginUseCase } from 'domain/usecases/auth/user-login.usecase';
 import * as authActions from '@app/state/auth/auth.actions';
 import { Store } from '@ngrx/store';
+import { AuthcookieService } from '@app/services/cookie/authcookie.service';
 
 @Component({
   selector: 'app-login',
@@ -32,6 +33,7 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private UserRepo: UserLoginUseCase,
     //private notification: NotificationService,
+    private cookie: AuthcookieService,
     private store: Store
   ) {}
   ngOnInit(): void {
@@ -66,6 +68,7 @@ export class LoginComponent implements OnInit {
       next: (v) => {
         this.submitted = false;
         this.store.dispatch(authActions.loginUserInfo({ userInfo: v }));
+        this.cookie.addCookie({ tokenType : v._typeOftoken, accessToken : v._token })
       },
       error: (e) => {
         //console.log('loginComponent',e);

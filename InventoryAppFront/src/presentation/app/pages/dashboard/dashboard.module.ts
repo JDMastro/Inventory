@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { AuthcookieService } from '@app/services/cookie/authcookie.service';
 
 
 @NgModule({
@@ -10,9 +9,6 @@ import { AuthcookieService } from '@app/services/cookie/authcookie.service';
   imports: [
     CommonModule,
     DashboardRoutingModule
-  ],
-  providers:[
-    AuthcookieService
   ]
 })
 export class DashboardModule { }

@@ -7,11 +7,14 @@ export class AuthcookieService {
   constructor(private cookieService: CookieService) {}
 
   getCookie() {
-    return JSON.parse(this.cookieService.get(this.cookieName))
+    return this.cookieService.get(this.cookieName)
+      ? JSON.parse(this.cookieService.get(this.cookieName))
+      : null;
+    //return JSON.parse(this.cookieService.get(this.cookieName))
   }
 
   addCookie(token: any) {
-    this.cookieService.set(this.cookieName, JSON.stringify(token));
+    this.cookieService.set(this.cookieName, JSON.stringify(token), 1, '/');
   }
 
   removeCookie() {

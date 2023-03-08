@@ -18,6 +18,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { AuthEffects } from '@app/state/auth/auth.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'environments/environment';
+import { AuthcookieService } from './services/cookie/authcookie.service';
 //import { ErrorMessageComponent } from './components/error-message/error-message.component';
 
 
@@ -50,7 +51,8 @@ import { environment } from 'environments/environment';
       useClass: HttpErrorInterceptorService,
       multi: true
     },
-    CookieService
+    CookieService,
+    AuthcookieService
   ],
   bootstrap: [AppComponent]
 })

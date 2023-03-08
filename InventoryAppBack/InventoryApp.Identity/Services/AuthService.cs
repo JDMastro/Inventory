@@ -33,14 +33,14 @@ namespace InventoryApp.Identity.Services
             if (user == null)
             {
                 //throw new Exception($"El usuario con el email {request.Email} no existe");
-                throw new Unauthorized();
+                throw new Unauthorized("Credenciales inválidas :'(");
             }
             var result = await _signInManager.PasswordSignInAsync(user.UserName,
                                  request.Password, false, lockoutOnFailure: false);
 
             if (!result.Succeeded)
             {
-                throw new Unauthorized();
+                throw new Unauthorized("Credenciales inválidas :'(");
             }
 
             var token = await GenerateToken(user);

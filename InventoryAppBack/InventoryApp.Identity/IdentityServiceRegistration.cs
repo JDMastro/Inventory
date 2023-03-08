@@ -51,6 +51,7 @@ namespace InventoryApp.Identity
 
             services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IAuthValidationService, AuthValidationService>();
+            services.AddTransient<IUserService, UserService>();
 
             services.AddAuthentication(options =>
             {

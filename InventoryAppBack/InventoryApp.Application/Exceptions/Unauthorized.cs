@@ -5,7 +5,7 @@
     /// </summary>
     public class Unauthorized : ApplicationException
     {
-        public Unauthorized() : base("Credenciales inválidas :'(")
+        public Unauthorized(string message) : base(message)
         {
         }
     }

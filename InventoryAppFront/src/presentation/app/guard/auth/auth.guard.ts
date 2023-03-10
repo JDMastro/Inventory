@@ -23,9 +23,9 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     
-      const checkCookie = this.cookie.getCookie()
+      //const checkCookie = this.cookie.getCookie()
 
-      if(!checkCookie) { this.redirect() }
+      //if(!checkCookie) { this.redirect() }
 
       /*this.auth$.subscribe(
         {

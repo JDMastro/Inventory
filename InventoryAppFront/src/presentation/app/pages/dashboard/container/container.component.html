@@ -1,11 +1,30 @@
-<a routerLink="/dashboard/home">Home</a>
+<!--<a routerLink="/dashboard/home">Home</a>
 <br>
 <a routerLink="/dashboard/product">Product</a>
 
 
-<p>{{( user$ | async )?._email}}</p>
+<p>{{( user$ | async )?._email}}</p>-->
 
-<main>
-    <router-outlet></router-outlet>
+<!--<app-navbar></app-navbar> -->
 
-</main>
+
+<div class="container">
+    <div class="container__sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+
+   <div class="main">
+    <div class="container__navbar">
+        <app-navbar></app-navbar>
+    </div>
+   
+    <div class="container__main">
+        <router-outlet></router-outlet>
+    </div>
+   </div>
+</div>
+
+
+
+
+

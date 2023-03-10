@@ -1,3 +1,24 @@
+
+@import "styles/colors";
+
+
 .routerDashboard{
     position: relative;
+}
+
+.container{
+    display: flex;
+    &__sidebar{
+        border-right: 1px solid $on-primary;
+        height: 100vh;
+        width: 250px;
+    }
+    &__main{
+        padding: 10px;
+    }
+}
+
+.main{
+    width: 100%;
+    margin: 0;
 }

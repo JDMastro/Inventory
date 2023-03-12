@@ -1,19 +1,36 @@
 <div class="sidebar-container">
-    <h4>Inventory App</h4>
+    <h4 class="sidebar-container__title">Inventory App</h4>
     <ul class="sidebar-container__menu">
-        <li>
-            <a>
+        <li class="sidebar-container__item sidebar-container__item--actived">
+            <a class="link">
                 <i class="pi pi-th-large"></i>
-                Dashboard
+                <span class="">Dashboard</span>
             </a>
         </li>
-        <li>
-            <a>
+        <li class="sidebar-container__item">
+            <a class="link">
                 <i class="pi pi-chart-line"></i>
-                Movimientos
+                <span class="">Movimientos</span>
             </a>
         </li>
     </ul>
+    <ul class="sidebar-container__menu">
+        <li class="sidebar-container__module">Productos</li>
+        <li class="sidebar-container__item">
+            <a class="link">
+                <i class="pi pi-box"></i>
+                <span class="">Productos</span>
+            </a>
+        </li>
+        <li class="sidebar-container__item">
+            <a class="link">
+                <i class="pi pi-book"></i>
+                <span class="">Catálogo</span>
+            </a>
+        </li>
+    </ul>
+
+    <a class="logout"><i class="pi pi-power-off logout__icon"></i>Cerrar sesion</a>
 </div>
 
 <!--<i class="pi pi-th-large"></i>-->

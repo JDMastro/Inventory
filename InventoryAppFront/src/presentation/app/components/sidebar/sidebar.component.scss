@@ -2,9 +2,69 @@
 @import "styles/colors";
 
 
-.sidebar-container{
-    &__menu{
+.sidebar-container {
+    padding: 10px;
+
+    &__menu {
         padding: 0;
         list-style: none;
+    }
+
+    &__item {
+        color: $on-base-light;
+        height: 30px;
+        cursor: pointer;
+
+        &:hover {
+            color: $on-base;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background-color: #e7e6e6da;
+        }
+
+        &--actived {
+            color: $primary-light;
+
+            &:hover {
+                -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+                color: $primary-light;
+                background-color: white;
+            }
+        }
+
+
+    }
+
+    &__module{
+        color: $on-base-light;
+        font-size: .6rem;
+        text-transform: uppercase;
+    }
+
+    &__title{
+        text-align: center;
+    }
+}
+
+.link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.logout{
+    position: absolute;
+    bottom: 30px;
+    margin: 0 auto;
+    left: 4%;
+    cursor: pointer;
+
+    &__icon{
+        margin-right: 10px;
     }
 }

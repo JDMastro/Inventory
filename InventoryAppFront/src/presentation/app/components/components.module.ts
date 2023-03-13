@@ -5,6 +5,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {ToolbarModule} from 'primeng/toolbar';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AvatarModule } from 'primeng/avatar';
+import { RouterModule } from '@angular/router';
+
 
 
 
@@ -13,7 +15,8 @@ import { AvatarModule } from 'primeng/avatar';
   imports: [
     CommonModule,
     ToolbarModule,
-    AvatarModule
+    AvatarModule,
+    RouterModule
   ],
   exports:[ErrorMessageComponent, NavbarComponent, SidebarComponent]
 })

@@ -7,6 +7,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { AvatarModule } from 'primeng/avatar';
 import { RouterModule } from '@angular/router';
 
+import {  FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -16,7 +17,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     ToolbarModule,
     AvatarModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ],
   exports:[ErrorMessageComponent, NavbarComponent, SidebarComponent]
 })

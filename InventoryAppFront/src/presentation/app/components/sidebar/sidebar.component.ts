@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faHouse, faSquarePlus, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
-  
+  faHouse = faHouse;
+  faSquarePlus = faSquarePlus;
+  faSquareArrowUpRight = faSquareArrowUpRight;
   
 }

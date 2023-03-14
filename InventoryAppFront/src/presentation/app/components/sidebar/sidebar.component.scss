@@ -4,12 +4,16 @@
 
 .sidebar-container {
     padding: 10px;
+
+    &__title{
+        text-align: center;
+    }
 }
 
 .menu {
     list-style: none;
     padding: 0;
-    width: 100%;
+    width: 95%;
     margin: 8px;
 
     &__item {
@@ -56,4 +60,8 @@
         }
 
     }
+}
+
+.icon{
+    margin-right: 5px;
 }

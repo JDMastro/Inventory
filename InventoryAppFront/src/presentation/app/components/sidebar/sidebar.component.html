@@ -1,10 +1,15 @@
 <div class="sidebar-container">
+    <h3 class="sidebar-container__title">InventoryApp</h3>
     <ul class="menu">
         <li class="menu__module">
             <small class="menu__title">Menu</small>
         </li>
         <li class="menu__item">
-            <a href="#" class="link" routerLink="/dashboard/home" routerLinkActive="link--actived">Dashboard</a>
+            <a href="#" class="link" routerLink="/dashboard/home" routerLinkActive="link--actived">
+                
+            <fa-icon [icon]="faHouse" class="icon"></fa-icon>
+                Dashboard
+            </a>
         </li>
     </ul>
 
@@ -13,58 +18,18 @@
             <small class="menu__title">Productos</small>
         </li>
         <li class="menu__item">
-            <a href="#" class="link" routerLink="/dashboard/product" routerLinkActive="link--actived">Producto</a>
+            <a href="#" class="link" routerLink="/dashboard/product" routerLinkActive="link--actived">
+                <fa-icon [icon]="faSquarePlus" class="icon"></fa-icon>
+                Producto
+            </a>
         </li>
         <li class="menu__item">
-            <a href="#" class="link">Catálogo</a>
+            <a href="#" class="link">
+                <fa-icon [icon]="faSquareArrowUpRight" class="icon"></fa-icon>
+                Catálogo
+            </a>
         </li>
     </ul>
-
-    <ul class="menu">
-        <li class="menu__module">
-            <small class="menu__title">Negocios</small>
-        </li>
-        <li class="menu__item">
-            <a href="#" class="link">Empresas</a>
-        </li>
-        <li class="menu__item">
-            <a href="#" class="link">Sucursales</a>
-        </li>
-    </ul>
-
-
-    <ul class="menu">
-        <li class="menu__module">
-            <small class="menu__title">Tipo de persona</small>
-        </li>
-        <li class="menu__item">
-            <a href="#" class="link">Clientes</a>
-        </li>
-        <li class="menu__item">
-            <a href="#" class="link">Proveedores</a>
-        </li>
-    </ul>
-
 
 
 </div>
-
-<!--<i class="pi pi-th-large"></i>-->
-
-<!--
-    <ul class="sidebar-container__menu">
-        <li class="sidebar-container__module">Productos</li>
-        <li class="sidebar-container__item">
-            <a class="link" routerLink="/dashboard/product" routerLinkActive="sidebar-container__item--actived">
-                <i class="pi pi-box"></i>
-                <span class="">Productos</span>
-            </a>
-        </li>
-        <li class="sidebar-container__item">
-            <a class="link">
-                <i class="pi pi-book"></i>
-                <span class="">Catálogo</span>
-            </a>
-        </li>
-    </ul>
--->

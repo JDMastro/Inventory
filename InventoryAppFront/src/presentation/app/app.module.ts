@@ -19,8 +19,6 @@ import { AuthEffects } from '@app/state/auth/auth.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'environments/environment';
 import { AuthcookieService } from './services/cookie/authcookie.service';
-//import { ErrorMessageComponent } from './components/error-message/error-message.component';
-
 
 
 @NgModule({
@@ -44,7 +42,7 @@ import { AuthcookieService } from './services/cookie/authcookie.service';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
       
-    }),
+    })
   ],
   providers:[
     {
@@ -57,4 +55,5 @@ import { AuthcookieService } from './services/cookie/authcookie.service';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

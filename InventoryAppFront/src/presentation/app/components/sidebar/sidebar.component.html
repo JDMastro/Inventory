@@ -5,7 +5,7 @@
             <small class="menu__title">Menu</small>
         </li>
         <li class="menu__item">
-            <a href="#" class="link" routerLink="/dashboard/home" routerLinkActive="link--actived">
+            <a (click)="closeSidebar()" class="link" routerLink="/dashboard/home" routerLinkActive="link--actived">
                 
             <fa-icon [icon]="faHouse" class="icon"></fa-icon>
                 Dashboard
@@ -18,13 +18,13 @@
             <small class="menu__title">Productos</small>
         </li>
         <li class="menu__item">
-            <a href="#" class="link" routerLink="/dashboard/product" routerLinkActive="link--actived">
+            <a (click)="closeSidebar()" class="link" routerLink="/dashboard/product" routerLinkActive="link--actived">
                 <fa-icon [icon]="faSquarePlus" class="icon"></fa-icon>
                 Producto
             </a>
         </li>
         <li class="menu__item">
-            <a href="#" class="link">
+            <a (click)="closeSidebar()" class="link">
                 <fa-icon [icon]="faSquareArrowUpRight" class="icon"></fa-icon>
                 Catálogo
             </a>

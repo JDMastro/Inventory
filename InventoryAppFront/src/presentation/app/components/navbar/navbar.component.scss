@@ -8,3 +8,10 @@
 :host ::ng-deep .p-toolbar {
     background-color: #eeeef04d;
 }
+
+
+@media screen and (min-width: 750px) {
+   .toogle{
+    display: none;
+   }
+}

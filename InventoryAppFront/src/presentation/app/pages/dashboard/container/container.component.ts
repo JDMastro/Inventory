@@ -10,7 +10,17 @@ import * as authSelector from '@app/state/auth/auth.selector';
 export class ContainerComponent {
   user$ = this.store.select(authSelector.selectUserInfo);
 
+  closeSidebar: boolean;
 
-  constructor(private store: Store<State>) {}
+  constructor(private store: Store<State>) {
+    this.closeSidebar = false
+  }
 
+  handleSidebar = () => {
+    this.closeSidebar = !this.closeSidebar;
+  };
+
+  closeSideBarByMenu = () => {
+    this.closeSidebar = false;
+  };
 }

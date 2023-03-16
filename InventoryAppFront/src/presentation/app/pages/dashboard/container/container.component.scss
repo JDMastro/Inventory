@@ -36,4 +36,23 @@
     .container__sidebar {
         display: none;
     }
+
+    .container__main {
+        height: 89vh;
+    }
+}
+
+.sidebar-close {
+    display: none;
+}
+
+.sidebar-open {
+    display: block;
+}
+
+@media screen and (min-width: 750px) {
+
+    .sidebar-close {
+        display: block;
+    }
 }

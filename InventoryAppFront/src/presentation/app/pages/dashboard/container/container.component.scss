@@ -12,6 +12,8 @@
         border-right: 1px solid $on-primary;
         height: 100vh;
         width: 300px;
+
+
     }
 
     &__main {
@@ -34,7 +36,8 @@
 
 @media screen and (max-width: 750px) {
     .container__sidebar {
-        display: none;
+        //display: none;
+        visibility: hidden;
     }
 
     .container__main {
@@ -43,16 +46,26 @@
 }
 
 .sidebar-close {
-    display: none;
+    //display: none;
+    visibility: hidden;
+    width: 0px;
+    transition: width .5s
 }
 
 .sidebar-open {
-    display: block;
+    //display: block;
+    visibility: visible;
+    width: 300px;
+    transition: width .5s
 }
+
+
 
 @media screen and (min-width: 750px) {
 
     .sidebar-close {
-        display: block;
+        visibility: visible;
+        width: 300px;
+        transition: width 2s
     }
 }

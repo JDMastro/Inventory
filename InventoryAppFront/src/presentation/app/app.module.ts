@@ -19,6 +19,7 @@ import { AuthEffects } from '@app/state/auth/auth.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'environments/environment';
 import { AuthcookieService } from './services/cookie/authcookie.service';
+import { HttpAuthInterceptorService } from './services/interceptors/http-auth-interceptor.service';
 
 
 @NgModule({
@@ -48,6 +49,11 @@ import { AuthcookieService } from './services/cookie/authcookie.service';
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpErrorInterceptorService,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpAuthInterceptorService,
       multi: true
     },
     CookieService,

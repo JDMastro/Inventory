@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from 'environments/environment';
 import { CookieService } from 'ngx-cookie-service';
 
 @Injectable()
@@ -18,6 +19,12 @@ export class AuthcookieService {
   }
 
   removeCookie() {
-    this.cookieService.delete(this.cookieName);
+    this.cookieService.delete(
+      this.cookieName,
+      '/',
+      environment.domainApp,
+      true,
+      'Strict'
+    );
   }
 }

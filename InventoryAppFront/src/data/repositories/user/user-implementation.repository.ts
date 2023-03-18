@@ -36,7 +36,7 @@ export class UserImplementationRepository extends UserRepository {
   }
   getUserProfile(): Observable<UserModel> {
     return this.http
-      .get<UserEntity>('/user/me')
+      .get<UserEntity>(`${environment.url}/user/me`)
       .pipe(map(this.userMapper.mapFrom));
   }
 

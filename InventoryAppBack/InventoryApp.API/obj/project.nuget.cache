@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IZZgg2pIHTgGNn7XuoajPdUio2XYfpbesk1cOcHK0f2mAsidVn+2XRt+/iEgeBx4bXMoEZrJCnQw9WrYmk+skg==",
+  "dgSpecHash": "xs3bsvsfIA/hQgiCDgPR5C0S2G6uwAcGI1Y8w4NXPFXP7ZBUujVqaLElT3g2aqM9BxZsi5jovaYORqI7Px3cyg==",
   "success": true,
   "projectFilePath": "D:\\Inventory\\InventoryAppBack\\InventoryApp.API\\InventoryApp.API.csproj",
   "expectedPackageFiles": [
@@ -76,6 +76,7 @@
     "C:\\Users\\-\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\-\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\-\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\-\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\-\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\-\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\-\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",

@@ -11,9 +11,7 @@
     &__sidebar {
         border-right: 1px solid $on-primary;
         height: 100vh;
-        width: 300px;
-
-
+        max-width: 200px;
     }
 
     &__main {

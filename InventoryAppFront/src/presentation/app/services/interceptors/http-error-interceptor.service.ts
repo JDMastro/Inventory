@@ -43,6 +43,7 @@ export class HttpErrorInterceptorService implements HttpInterceptor {
 
   private setError(error: HttpErrorResponse): string {
     let errorMessage = "No se pudo establecer la conexión con el servidor :'(";
+
     if (error.error instanceof ErrorEvent) {
       //client error
       errorMessage = error.error.message;

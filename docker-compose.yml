@@ -1,0 +1,40 @@
+version: '3.7'
+
+networks:
+  backend:
+    driver: bridge
+
+services:
+    db:
+      container_name: db
+      build:
+         context: ./db
+         dockerfile: Dockerfile
+      ports:
+        - "1433:1433"
+      environment:
+        - ACCEPT_EULA="Y"
+        - SA_PASSWORD=${SQL_SERVER_PASSWORD}
+      networks:
+        - backend
+
+    api:
+      container_name: inventoryapp-api
+      build:
+         context: ./InventoryAppBack
+         dockerfile: Dockerfile
+      ports:
+        - "5005:5005"
+      depends_on:
+        - db
+      networks:
+        - backend
+      
+    front:
+      container_name: inventoryapp-front
+      build:
+         context: ./InventoryAppFront
+         dockerfile: Dockerfile
+      ports:
+        - "80:80"
+      

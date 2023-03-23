@@ -292,3 +292,4 @@ D:\Inventory\InventoryAppBack\InventoryApp.API\obj\Debug\net7.0\refint\Inventory
 D:\Inventory\InventoryAppBack\InventoryApp.API\obj\Debug\net7.0\InventoryApp.API.pdb
 D:\Inventory\InventoryAppBack\InventoryApp.API\obj\Debug\net7.0\InventoryApp.API.genruntimeconfig.cache
 D:\Inventory\InventoryAppBack\InventoryApp.API\obj\Debug\net7.0\ref\InventoryApp.API.dll
+D:\Inventory\InventoryAppBack\InventoryApp.API\bin\Debug\net7.0\appsettings.Production.json

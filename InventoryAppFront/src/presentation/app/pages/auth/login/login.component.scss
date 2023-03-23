@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+   margin-top: 20px;
 }
 
 .section-image {
@@ -22,7 +22,7 @@
     -moz-border-radius-bottomleft: 40px;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
-    background-image: url('../../../../assets/login-bg.jpg');
+    background-image: url('../../../../assets/img/login-bg.jpg');
     background-repeat: no-repeat no-repeat;
     display: flex;
     justify-content: center;
@@ -73,7 +73,7 @@
     display: inline-block;
     margin-right: 5px;
     vertical-align: middle;
-    background-image: url('../../../../assets/google.png');
+    background-image: url('../../../../assets/img/google.png');
     background-repeat: no-repeat no-repeat;
 }
 
@@ -97,7 +97,7 @@
 
     &::after {
         background: #fff;
-        content: 'Inicia sesión';
+        content: 'Registrate';
         padding: 0 4px;
         position: relative;
         top: -8px;
@@ -118,7 +118,7 @@
     }
 
     &__btn {
-        margin-top: 50px;
+        margin-top: 10px;
     }
 }
 
@@ -140,12 +140,5 @@
 
     .section-form {
         width: 100%;
-    }
-}
-
-@media screen and (min-height: 750px) {
-    .login-container {
-        justify-content: center;
-        align-items: center;
     }
 }

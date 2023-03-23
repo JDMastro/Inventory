@@ -22,5 +22,5 @@ RUN dotnet publish "InventoryApp.API.csproj" -c Release -o /app/publish /p:UseAp
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENV ASPNETCORE_URLS=http://+:5005  
+#ENV ASPNETCORE_URLS=http://+:5005  
 ENTRYPOINT ["dotnet", "InventoryApp.API.dll"]

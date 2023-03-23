@@ -1,12 +1,12 @@
 version: '3.7'
 
 networks:
-  backend:
+  api:
     driver: bridge
 
 services:
     db:
-      container_name: db
+      container_name: ${ENV_PREFIX}db
       build:
          context: ./db
          dockerfile: Dockerfile
@@ -16,22 +16,27 @@ services:
         - ACCEPT_EULA="Y"
         - SA_PASSWORD=${SQL_SERVER_PASSWORD}
       networks:
-        - backend
+        - api
 
     api:
-      container_name: inventoryapp-api
+      container_name: ${ENV_PREFIX}inventoryapp-api
       build:
          context: ./InventoryAppBack
          dockerfile: Dockerfile
       ports:
         - "5005:5005"
+      #environment:
+      #  - ASPNETCORE_URLS=http://+:5005
+      #  - ASPNETCORE_ENVIRONMENT=Development
       depends_on:
         - db
+      env_file:
+        - "production.env"
       networks:
-        - backend
+        - api
       
     front:
-      container_name: inventoryapp-front
+      container_name: ${ENV_PREFIX}inventoryapp-front
       build:
          context: ./InventoryAppFront
          dockerfile: Dockerfile

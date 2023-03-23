@@ -45,6 +45,8 @@ export class AuthGuard implements CanActivate {
       this.redirect();
     }*/
 
+    
+
     this.auth$.subscribe({
       next: (v) => {
         if (!v && !checkCookie) {
@@ -67,6 +69,8 @@ export class AuthGuard implements CanActivate {
       error: (e) => console.log(e),
       complete: () => {},
     });
+
+    
 
     return true;
   }

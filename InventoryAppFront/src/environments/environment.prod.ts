@@ -1,6 +1,6 @@
 export const environment = {
     production: true,
     name: 'prod',
-    url : "http://localhost:5005/api",
+    url : "http://127.0.0.1:5005/api",
     domainApp : 'localhost'
 };
